@@ -54,8 +54,9 @@ body {
 @media only screen and (max-width: 600px ){
     .container{
       flex-direction: column;
-      gap: 12px;
+      gap: 10px;
       overflow-x: auto;
+      display: flex;
     }
     html{
       font-size: 14px;
