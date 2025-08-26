@@ -20,6 +20,7 @@ body {
     aspect-ratio: 1/1;
     color: white;
     padding: 20px;
+    display: flex;
     text-align: center;
     overflow: hidden;
 }
@@ -60,6 +61,7 @@ body {
       overflow-x: auto;
       display: flex;
       padding: 10px;
+      align-items: center;
     }
     html{
       font-size: 14px;
@@ -69,7 +71,13 @@ body {
       height: auto;
       display: inline-block;
     }
-
+    .left{
+      width: 200px;
+      aspect-ratio: 1/1;
+    }
+    .right{
+      text-align: center;
+    }
   
 }
 
