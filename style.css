@@ -55,6 +55,7 @@ body {
     .container{
       flex-direction: column;
       gap: 12px;
+      overflow-x: auto;
     }
     html{
       font-size: 14px;
@@ -62,6 +63,7 @@ body {
     img{
       width: 100%;
       height: auto;
+      display: inline-block;
     }
 
   
@@ -72,5 +74,6 @@ body {
     flex-direction: row;   
     flex-wrap: wrap;       
     gap: 16px;
+    overflow: auto;
   }
 }
