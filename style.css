@@ -7,6 +7,7 @@ body {
 .container {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
     margin: 50px auto;
     background: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -17,6 +18,8 @@ body {
 .left {
     width: 35%;
     background: #2c3e50;
+    flex: 1;
+    min-width: 250px;
     aspect-ratio: 1/1;
     color: white;
     padding: 20px;
@@ -38,6 +41,7 @@ body {
 
 .right {
   width: 65%;
+  flex: 2;
   padding: 20px;
 }
 
