@@ -29,7 +29,7 @@ body {
 }
 
 .left img {
-    width: 250px;
+    width: 150px;
     max-width: 100%;
     height: 250px;
     object-fit: cover;
@@ -63,6 +63,7 @@ body {
     .container{
       flex-direction: column;
       gap: 10px;
+      text-align: center;
       overflow-x: auto;
       display: flex;
       padding: 10px;
