@@ -6,7 +6,7 @@ body {
 
 .container {
     display: flex;
-    width: 80%;
+    width: 100%;
     margin: 50px auto;
     background: white;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
@@ -17,16 +17,18 @@ body {
 .left {
     width: 35%;
     background: #2c3e50;
+    aspect-ratio: 1/1;
     color: white;
     padding: 20px;
     text-align: center;
+    overflow: hidden;
 }
 
 .left img {
     width: 100%;
     max-width: 100%;
-    min-height: 100vh;
     height: auto;
+    object-fit: cover;
     border-radius: 50%;
     margin-bottom: 15px;
     border: 3px solid white;
