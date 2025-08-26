@@ -57,6 +57,7 @@ body {
       gap: 10px;
       overflow-x: auto;
       display: flex;
+      padding: 10px;
     }
     html{
       font-size: 14px;
