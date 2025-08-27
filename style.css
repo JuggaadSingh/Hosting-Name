@@ -20,6 +20,8 @@ body {
     background: #2c3e50;
     flex: 1;
     min-width: 250px;
+    flex-direction: column;
+    align-items: center;
     color: white;
     padding: 20px;
     display: flex;
@@ -82,6 +84,7 @@ body {
     }
     .right{
       text-align: center;
+      width: 100%;
     }
   
 }
