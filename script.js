@@ -1,21 +1,27 @@
-async function getGithubData() {
-    try {
-      const response = await fetch("https://api.github.com/users/JuggaadSingh"); 
-      if (!response.ok) {
-        throw new Error("Network response was not ok");
-      }
+async function getprofile() {
+    let username = document.getElementById("username").value;
+    let result = document.getElementById("result");
 
-      const data = await response.json();
-
-      document.getElementById("username").innerHTML = data.login;
-      document.getElementById("repos").innerHTML = data.public_repos;
-      document.getElementById("followers").innerHTML = data.followers;
-      document.getElementById("profile").href = data.html_url;
-
-    } catch (error) {
-      console.error("Error fetching GitHub data:", error);
+    if(!username){
+      alert("Please enter a username");
+      return;
     }
+    let response = await fetch(`https://api.github.com/users/{username}`);
+    if(response.ok){
+      let data = await response.json();
+      document.getElementById("avatar").src = data.avatar_url;
+      document.getElementById("name").innerText = data.name || data.login;
+      document.getElementById("link").href = data.html_url;
+        result.style.display = "block";
+  } else {
+    alert("User not found!");
+    result.style.display = "none";
   }
+        
+    
 
 
-  getGithubData();
+}
+
+
+  
