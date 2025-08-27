@@ -51,11 +51,15 @@
         
 
     </div>
-   <h2>My Github Info</h2>
-   <p>Username: <span id="username"></span></p>
-   <p>Public repos: <span id="repos"></span></p>
-   <p>Followers: <span id="followers"></span></p>
-   <p>Profile: <a id="profile" href="#" target="_blank">Visit Github</a></p>
+   <h2>Finf Github Profile</h2>
+   <input type="text" id="username" placeholder="Enter Github username">
+   <button onclick="getprofile()">Search</button>
+   <div id="result" style="margin-top:20px; display:none;">
+        <img id="avatar" width="100" style="border-radius:50%;"><br>
+        <strong id="name"></strong><br>
+        <a id="link" href="#" target="_blank">View Profile</a>
+   </div>
+   
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js">
