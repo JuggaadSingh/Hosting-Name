@@ -20,12 +20,10 @@ body {
     background: #2c3e50;
     flex: 1;
     min-width: 250px;
-    aspect-ratio: 1/1;
     color: white;
     padding: 20px;
     display: flex;
     text-align: center;
-    overflow: hidden;
 }
 
 .left img {
@@ -78,8 +76,9 @@ body {
       display: inline-block;
     }
     .left{
-      width: 200px;
-      aspect-ratio: 1/1;
+      width: 100%;
+      min-width: unset;
+      text-align: center;
     }
     .right{
       text-align: center;
