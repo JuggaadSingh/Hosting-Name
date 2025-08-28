@@ -1,27 +1,28 @@
-async function getprofile() {
-    let username = document.getElementById("username").value;
-    let result = document.getElementById("result");
+async function getAge() {
+  const name = document.getElementById("nameInput").value.trim();
 
-    if(!username){
-      alert("Please enter a username");
-      return;
-    }
-    let response = await fetch(`https://api.github.com/users/{username}`);
-    if(response.ok){
-      let data = await response.json();
-      document.getElementById("avatar").src = data.avatar_url;
-      document.getElementById("name").innerText = data.name || data.login;
-      document.getElementById("link").href = data.html_url;
-        result.style.display = "block";
-  } else {
-    alert("User not found!");
-    result.style.display = "none";
+  if (!name) {
+    document.getElementById("nameResult").innerText = "Please enter a name!";
+    document.getElementById("ageResult").innerText = "";
+    document.getElementById("countResult").innerText = "";
+    return;
   }
-        
+
+  const url = `https://api.agify.io?name=${name}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
     
+    document.getElementById("nameResult").innerText = "Name: " + data.name;
+    document.getElementById("ageResult").innerText = "Predicted Age: " + data.age;
+    document.getElementById("countResult").innerText = "Count: " + data.count;
 
-
+  } catch (error) {
+    document.getElementById("nameResult").innerText = "Error fetching data!";
+    document.getElementById("ageResult").innerText = "";
+    document.getElementById("countResult").innerText = "";
+    console.error(error);
+  }
 }
-
-
-  
