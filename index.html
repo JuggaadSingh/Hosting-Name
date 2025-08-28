@@ -51,18 +51,20 @@
         
 
     </div>
-   <h2>Finf Github Profile</h2>
-   <input type="text" id="username" placeholder="Enter Github username">
-   <button onclick="getprofile()">Search</button>
-   <div id="result" style="margin-top:20px; display:none;">
-        <img id="avatar" width="100" style="border-radius:50%;"><br>
-        <strong id="name"></strong><br>
-        <a id="link" href="#" target="_blank">View Profile</a>
-   </div>
+  
+    <h2>Age Predictor (Agify API)</h2>
+  
+    <input type="text" id="nameInput" placeholder="Enter a name">
+    <button onclick="getAge()">Get Age</button>
+  
+    <p id="nameResult"></p>
+    <p id="ageResult"></p>
+    <p id="countResult"></p>
+
    
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="script.js">
+  <script src="script.js" defer></script>
 
   </script>
 </body>
